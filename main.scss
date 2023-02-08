@@ -50,6 +50,9 @@ body {
   & > div {
     position: absolute;
     max-width: 100%;
+    & img {
+      max-width: 100%;
+    }
   }
 
   .img-top {
