@@ -1,0 +1,143 @@
+// Font
+$font: "Kumbh Sans", sans-serif;
+
+// Colors
+
+// --- primary---
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+// --- nature ---
+$dark-gray: hsl(0, 0%, 59%);
+
+// Custom style
+$padding-inline: 1.5rem;
+$f-height: 100vh;
+
+.f-height {
+  height: $f-height;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 1.8rem;
+  // line-height: 1.5;
+}
+
+.container {
+  padding: 0 $padding-inline;
+  background-color: $dark-cyan;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    max-width: 100%;
+  }
+
+  .img-top {
+    left: -25%;
+    top: -90%;
+  }
+
+  .img-bottom {
+    bottom: -110%;
+    right: -15%;
+  }
+
+  @media (max-width: 375px) {
+    .img-top {
+      top: -20%;
+      left: -40%;
+    }
+    .img-bottom {
+      bottom: -30%;
+      right: -30%;
+    }
+  }
+}
+
+main {
+  position: relative;
+  background-color: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  .head-img {
+    position: relative;
+    .avatar {
+      $rad: 50%;
+      padding: 0.5rem;
+      background-color: #fff;
+      border-radius: $rad;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        border-radius: $rad;
+      }
+    }
+  }
+
+  .body-content,
+  .foot {
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  .body-content {
+    margin-top: 5rem;
+    & h1 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $very-dark-desaturated-blue;
+
+      & span {
+        color: $dark-gray;
+        font-weight: 400;
+      }
+    }
+
+    & p {
+      color: $dark-gray;
+      font-weight: 400;
+    }
+  }
+
+  .foot {
+    border-top: 1px solid #f3f3f3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $very-dark-desaturated-blue;
+    }
+
+    & span {
+      color: $dark-gray;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 0;
+    }
+  }
+}
